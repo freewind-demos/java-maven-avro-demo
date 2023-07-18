@@ -1,0 +1,28 @@
+{
+  "namespace": "demo",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "favorite_number",
+      // NOTE the order of types matters to "default"
+      "type": [
+        "null",
+        "int"
+      ],
+      // NOTE the "default" value must belong to the first type of "type" array
+      "default": null
+    },
+    {
+      "name": "favorite_color",
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  ]
+}
